@@ -264,15 +264,15 @@ class EdifyGenerator(object):
     """Log a message to the screen (if the logs are visible)."""
     self.script.append('ui_print("%s");' % (message,))
 
-  def PrintPixelExperienceBanner(self, is_plus, android_version, build_id, build_date,
+  def PrintInexDroidBanner(self, android_version, build_id, build_date,
                                   security_patch, device):
     self.Print("----------------------------------------------")
-    if is_plus:
-      self.Print("        PixelExperience (Plus edition)")
-      self.Print("                by jhenrique09")
-    else:
-      self.Print("              PixelExperience")
-      self.Print("              by jhenrique09")
+    self.Print("      _                     __           _     __")
+    self.Print("     (_)___  ___  _  ______/ /________  (_)___/ /")
+    self.Print("    / / __ \/ _ \| |/_/ __  / ___/ __ \/ / __  / ")
+    self.Print("   / / / / /  __/>  </ /_/ / /  / /_/ / / /_/ /  ")
+    self.Print("  /_/_/ /_/\___/_/|_|\__,_/_/   \____/_/\__,_/   ")
+    self.Print("By dotkit")
     self.Print("----------------------------------------------")
     self.Print(" Android version: %s"%(android_version))
     self.Print(" Build id: %s"%(build_id))
